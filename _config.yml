@@ -1,0 +1,8 @@
+title: "My Tribune"
+description: "뉴스 & 에세이"
+baseurl: ""
+url: "https://username.github.io"  # 본인 주소
+theme: minima  # Jekyll 기본 테마, 나중에 커스터마이징 가능
+
+# 빌드 옵션
+markdown: kramdown
