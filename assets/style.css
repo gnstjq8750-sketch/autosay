@@ -13,14 +13,15 @@ a {
 }
 a:hover { color: #0073e6; }
 
-/* 헤더 */
+/* 헤더 스타일 수정 */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
+  background: #fff;        /* 흰색 배경으로 변경 */
   padding: 15px 30px;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #ddd; /* 경계선은 연한 회색 */
+  color: #000;             /* 글자는 검정 */
 }
 .logo h1 {
   margin: 0;
