@@ -1,18 +1,64 @@
 body {
   font-family: Arial, sans-serif;
-  max-width: 1000px;
+  line-height: 1.6;
+  max-width: 1200px;
   margin: auto;
-  background: #f7f7f7;
+  background: #f5f5f5;
 }
-header, footer {
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px;
+  border-bottom: 2px solid #000;
+}
+
+.site-header .logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.menu a {
+  margin-left: 15px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #0073e6;
+}
+
+main {
+  padding: 20px;
+  background: #fff;
+}
+
+.latest-news h2,
+.popular-news h2 {
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.latest-news ul li {
+  margin-bottom: 15px;
+}
+
+.main-highlight {
+  margin: 30px 0;
+  padding: 20px;
+  background: #eee;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  padding: 20px;
   background: #222;
-  color: white;
-  padding: 15px;
-}
-article {
-  background: white;
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #fff;
 }
