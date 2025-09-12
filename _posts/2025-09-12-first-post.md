@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "첫 번째 뉴스 기사"
+title: "포르쉐 911 GTS"
 ---
 
 오늘부터 **Autosay** 블로그를 시작합니다 🚗  
