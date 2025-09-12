@@ -3,42 +3,50 @@ layout: default
 title: Autosay 메인
 ---
 
-<section class="latest-news">
+<!-- 상단 최신뉴스 -->
+<section class="headline">
   <h2>최신뉴스</h2>
-  <ul>
-    {% for post in site.posts limit:5 %}
-      <li>
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          <h3>{{ post.title }}</h3>
-        </a>
-        <p class="meta">{{ post.date | date: "%Y-%m-%d" }}</p>
-        <p>{{ post.excerpt }}</p>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
-
-<section class="main-highlight">
-  {% assign main_post = site.posts.first %}
-  {% if main_post %}
-    <article>
-      <h2>{{ main_post.title }}</h2>
+  <div class="headline-grid">
+    <!-- 대표 큰 뉴스 -->
+    {% assign main_post = site.posts.first %}
+    {% if main_post %}
+    <article class="main-article">
+      <a href="{{ main_post.url | prepend: site.baseurl }}">
+        <img src="{{ main_post.image | default: site.baseurl | append: '/assets/default.jpg' }}" alt="{{ main_post.title }}">
+        <h3>{{ main_post.title }}</h3>
+      </a>
       <p class="meta">{{ main_post.date | date: "%Y-%m-%d" }}</p>
       <p>{{ main_post.excerpt }}</p>
-      <a href="{{ main_post.url | prepend: site.baseurl }}">자세히 보기 →</a>
     </article>
-  {% endif %}
+    {% endif %}
+
+    <!-- 오른쪽 작은 뉴스 목록 -->
+    <aside class="side-articles">
+      <ul>
+      {% for post in site.posts offset:1 limit:4 %}
+        <li>
+          <a href="{{ post.url | prepend: site.baseurl }}">
+            <img src="{{ post.image | default: site.baseurl | append: '/assets/default_thumb.jpg' }}" alt="{{ post.title }}">
+            <span>{{ post.title }}</span>
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+    </aside>
+  </div>
 </section>
 
+<!-- 주요 뉴스 섹션 -->
 <section class="popular-news">
   <h2>주요뉴스</h2>
-  <ul>
-    {% for post in site.posts offset:1 limit:6 %}
-      <li>
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          {{ post.title }}
-        </a>
-      </li>
+  <div class="news-grid">
+    {% for post in site.posts limit:6 %}
+    <article>
+      <a href="{{ post.url | prepend: site.baseurl }}">
+        <img src="{{ post.image | default: site.baseurl | append: '/assets/default_thumb.jpg' }}" alt="{{ post.title }}">
+        <h4>{{ post.title }}</h4>
+      </a>
+    </article>
     {% endfor %}
-  </ul>
+  </div>
 </section>
