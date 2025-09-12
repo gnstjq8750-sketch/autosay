@@ -18,7 +18,7 @@ a:hover { color: #0073e6; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;        /* 흰색 배경으로 변경 */
+  background: transparent;        /* 흰색 배경으로 변경 */
   padding: 15px 30px;
   border-bottom: 2px solid #ddd; /* 경계선은 연한 회색 */
   color: #000;             /* 글자는 검정 */
