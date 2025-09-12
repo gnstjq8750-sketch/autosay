@@ -1,106 +1,45 @@
-/* 기본 레이아웃 */
-body {
-  font-family: 'Noto Sans KR', Arial, sans-serif;
-  background: #fff;
-  margin: 0;
-  padding: 0;
-  color: #222;
+.category-section {
+  margin-top: 40px;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
-}
-a:hover { color: #0073e6; }
-
-/* 헤더 스타일 수정 */
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: transparent;        /* 흰색 배경으로 변경 */
-  padding: 15px 30px;
-  border-bottom: 2px solid #ddd; /* 경계선은 연한 회색 */
-  color: #000;             /* 글자는 검정 */
-}
-.logo h1 {
-  margin: 0;
-}
-.logo a { font-size: 28px; font-weight: bold; color: #000; }
-.tagline { font-size: 14px; color: #666; margin-left: 10px; }
-.menu a { margin: 0 10px; font-weight: bold; }
-
-/* 메인 콘텐츠 */
-main {
-  width: 1200px;
-  margin: 20px auto;
-}
-
-/* 최신뉴스 */
-.headline h2, .popular-news h2 {
+.category-section h2 {
   border-bottom: 3px solid #000;
   padding-bottom: 8px;
   margin-bottom: 15px;
 }
 
-.headline-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
+.news-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-
-/* 큰 기사 */
-.main-article img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-.main-article h3 {
-  font-size: 22px;
-  margin: 10px 0 5px;
-}
-.main-article .meta { font-size: 14px; color: #666; }
-
-/* 오른쪽 작은 기사 */
-.side-articles ul { list-style: none; margin: 0; padding: 0; }
-.side-articles li {
+.news-list li {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
-.side-articles img {
-  width: 80px; height: 60px;
-  object-fit: cover; margin-right: 10px;
+.news-list img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  margin-right: 10px;
   border-radius: 3px;
 }
 
-/* 주요 뉴스 */
 .news-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 15px;
 }
-.news-grid article img {
-  width: 100%; height: 150px;
+.news-grid img {
+  width: 100%;
+  height: 150px;
   object-fit: cover;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   border-radius: 3px;
 }
-.news-grid article h4 {
-  font-size: 16px;
+.news-grid h4 {
+  font-size: 15px;
   margin: 0;
-}
-
-/* 푸터 */
-footer {
-  margin-top: 30px;
-  text-align: center;
-  padding: 20px;
-  background: #f2f2f2;
-  border-top: 1px solid #ccc;
-  color: #555;
-}
-header, .site-header {
-  background: #fff !important;
-  color: #000 !important;
+  color: #222;
 }
