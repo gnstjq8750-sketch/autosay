@@ -1,4 +1,6 @@
-title: "내 블로그"
-description: "Jekyll 블로그 테스트"
-theme: minima   # 사용 안 해도 됨 (직접 default.html 쓰는 경우)
+title: "Autosay"
+description: "자동차 뉴스 & 에세이"
+url: "https://gnstjq8750-sketch.github.io"
+baseurl: "/autosay"
 markdown: kramdown
+theme: null
