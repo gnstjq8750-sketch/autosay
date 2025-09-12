@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/style.css">
 </head>
 <body>
-  <header>
-    <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-    <nav>
-      <a href="{{ site.baseurl }}/">홈</a>
-      <a href="{{ site.baseurl }}/about">소개</a>
+  <header class="site-header">
+    <div class="logo">
+      <h1><a href="{{ site.baseurl }}/">Autosay</a></h1>
+    </div>
+    <nav class="menu">
+      <a href="#">자동차</a>
+      <a href="#">연예</a>
+      <a href="#">뉴스</a>
+      <a href="#">오피니언</a>
+      <a href="#">포토/영상</a>
     </nav>
   </header>
 
@@ -19,7 +24,7 @@
   </main>
 
   <footer>
-    <p>© 2024 {{ site.title }}</p>
+    <p>© {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </footer>
 </body>
 </html>
