@@ -1,30 +1,68 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="logo">
-      <h1><a href="{{ site.baseurl }}/">Autosay</a></h1>
-    </div>
-    <nav class="menu">
-      <a href="#">자동차</a>
-      <a href="#">연예</a>
-      <a href="#">뉴스</a>
-      <a href="#">오피니언</a>
-      <a href="#">포토/영상</a>
-    </nav>
-  </header>
+/* 기본 배경 */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;   /* <- 원래 #f5f5f5 에서 흰색으로 변경 */
+}
 
-  <main>
-    {{ content }}
-  </main>
+/* 헤더 */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;   /* <- 검은 배경(#222)에서 흰색으로 변경 */
+  padding: 15px;
+  border-bottom: 2px solid #000;  /* 경계선만 남김 */
+}
 
-  <footer>
-    <p>© {{ site.time | date: "%Y" }} {{ site.title }}</p>
-  </footer>
-</body>
-</html>
+.site-header .logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+/* 메뉴 */
+.menu a {
+  margin-left: 15px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+.menu a:hover {
+  color: #0073e6;
+}
+
+/* 메인 */
+main {
+  padding: 20px;
+  background: #fff;
+}
+
+/* 섹션 제목 */
+.latest-news h2,
+.popular-news h2 {
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* 메인 기사 */
+.main-highlight {
+  margin: 30px 0;
+  padding: 20px;
+  background: #f9f9f9;   /* 강조 영역은 연한 회색 */
+  border-radius: 5px;
+}
+
+/* 푸터 */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  padding: 20px;
+  background: #fff;   /* <- 검은 배경 없앰 */
+  color: #333;        /* 글자색은 어두운 회색 */
+  border-top: 1px solid #ccc;
+}
