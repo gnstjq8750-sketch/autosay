@@ -1,7 +1,16 @@
-/* 기본 글꼴 & 레이아웃 */
+/* ===== 기본 글꼴 & 레이아웃 ===== */
 body {
-  margin: 0;  /* ← 여기 중요! 반드시 px 단위 또는 0 */
+  margin: 0; /* 브라우저 기본 여백 제거 */
   font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+/* 공통 컨테이너 (본문 가운데 정렬) */
+main, section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* ===== 헤더 ===== */
@@ -12,10 +21,10 @@ body {
 
 .site-header .container {
   max-width: 1200px;
-  margin: 0 auto;              
-  display: flex;               
-  align-items: center;         
-  justify-content: space-between;
+  margin: 0 auto;
+  display: flex;                /* 가로 배치 */
+  align-items: center;          /* 세로 가운데 정렬 */
+  justify-content: space-between; /* 좌/우 균등 배치 */
   padding: 15px 20px;
 }
 
@@ -27,13 +36,13 @@ body {
   text-decoration: none;
 }
 
-/* 네비게이션 */
+/* ===== 네비게이션 ===== */
 .main-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  gap: 30px;
+  display: flex;   /* 가로 배치 */
+  gap: 30px;       /* 메뉴 사이 간격 */
 }
 
 .main-nav li {
@@ -50,11 +59,11 @@ body {
 }
 
 .main-nav a:hover {
-  color: #0078d7;
+  color: #0078d7; /* AutoTribune 스타일 파랑 */
   border-bottom: 2px solid #0078d7;
 }
 
-/* 오른쪽 로그인/검색 */
+/* ===== 헤더 오른쪽 (로그인/검색) ===== */
 .header-right {
   font-size: 14px;
   color: #666;
@@ -79,9 +88,120 @@ body {
   cursor: pointer;
 }
 
-/* 본문 정렬 */
-main, section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+/* ===== 최신뉴스 (헤드라인) ===== */
+.headline {
+  margin-top: 30px;
+}
+
+.headline-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 왼쪽 큰기사, 오른쪽 리스트 */
+  gap: 20px;
+}
+
+.main-article img.thumb-large {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.side-articles ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-articles li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.side-articles img.thumb {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+/* ===== 주요뉴스 ===== */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.news-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.news-grid h4 {
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ===== 주식 (그리드) ===== */
+.stock-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.stock-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.stock-grid h4 {
+  font-size: 15px;
+  margin: 0;
+}
+
+/* ===== 자동차 (리스트 형식) ===== */
+.news-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.news-list img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 12px;
+  border-radius: 4px;
+}
+
+.news-list span {
+  font-size: 15px;
+  color: #222;
+}
+
+/* ===== 골프 (리스트형/갤러리도 적용 가능) ===== */
+.golf-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.golf-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
 }
