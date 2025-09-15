@@ -1,6 +1,6 @@
 /* 기본 글꼴 & 레이아웃 */
 body {
-  margin: 10;
+  margin: 0;  /* ← 여기 중요! 반드시 px 단위 또는 0 */
   font-family: Arial, sans-serif;
 }
 
@@ -12,10 +12,10 @@ body {
 
 .site-header .container {
   max-width: 1200px;
-  margin: 0 auto;              /* 페이지 가운데 정렬 */
-  display: flex;               /* 가로 배치 */
-  align-items: center;         /* 세로 가운데 */
-  justify-content: space-between; /* 좌/우 여백 균등 */
+  margin: 0 auto;              
+  display: flex;               
+  align-items: center;         
+  justify-content: space-between;
   padding: 15px 20px;
 }
 
@@ -33,7 +33,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 30px;  /* 메뉴 간격 */
+  gap: 30px;
 }
 
 .main-nav li {
@@ -77,4 +77,11 @@ body {
   font-size: 16px;
   margin-left: 10px;
   cursor: pointer;
+}
+
+/* 본문 정렬 */
+main, section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
