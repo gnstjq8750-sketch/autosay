@@ -3,28 +3,45 @@
 <head>
   <meta charset="utf-8">
   <title>{{ page.title }}</title>
+
+  <!-- CSS 연결 (파일명을 꼭 확인하세요: assets/style.css) -->
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 <body>
+  <!-- ===== 상단 헤더 ===== -->
   <header class="site-header">
-    <div class="logo">
-      <h1><a href="{{ site.baseurl }}/">Autosay</a></h1>
-      <span class="tagline">주식 자동차 골프</span>
+    <div class="container">
+      <!-- 로고 -->
+      <h1 class="logo">
+        <a href="{{ site.baseurl }}/">Autosay</a>
+      </h1>
+
+      <!-- 네비게이션 -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="{{ site.baseurl }}/categories/stock/">주식</a></li>
+          <li><a href="{{ site.baseurl }}/categories/car/">자동차</a></li>
+          <li><a href="{{ site.baseurl }}/categories/golf/">골프</a></li>
+        </ul>
+      </nav>
+
+      <!-- 오른쪽 영역 -->
+      <div class="header-right">
+        <a href="#">로그인</a> | <a href="#">회원가입</a>
+        <button class="search-btn">🔍</button>
+        <button class="menu-btn">☰</button>
+      </div>
     </div>
-    <nav class="menu">
-      <a href="#">주식</a>
-      <a href="#">자동차</a>
-      <a href="#">골프</a>
-    </nav>
   </header>
 
+  <!-- ===== 본문 영역 ===== -->
   <main>
     {{ content }}
   </main>
 
+  <!-- ===== 푸터 ===== -->
   <footer>
     <p>© {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </footer>
 </body>
 </html>
-
