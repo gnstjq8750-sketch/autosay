@@ -70,5 +70,55 @@
   margin-bottom: 10px;
   font-size: 15px;
 }
+/* 메뉴 기본 세팅 */
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
+.menu > ul > li {
+  display: inline-block;   /* 가로로 메뉴 배치 */
+  position: relative;      /* 서브메뉴 위치 기준 */
+  margin-right: 20px;
+}
+
+.menu > ul > li > a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  color: #000;
+}
+
+/* 서브메뉴 숨기기 */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;     /* 부모(li)의 바로 아래 */
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.submenu li {
+  display: block;
+}
+
+.submenu a {
+  padding: 10px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  background: #f0f0f0;
+}
+
+/* 마우스를 올렸을 때 보이게 하기 */
+.menu ul li:hover > .submenu {
+  display: block;
+}
 
