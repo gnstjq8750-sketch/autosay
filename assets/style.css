@@ -1,10 +1,10 @@
-/* Body 기본 세팅 */
+/* 기본 글꼴 & 레이아웃 */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
-/* ===== 헤더 전체 ===== */
+/* ===== 헤더 ===== */
 .site-header {
   border-bottom: 1px solid #ddd;
   background: #fff;
@@ -13,15 +13,13 @@ body {
 .site-header .container {
   max-width: 1200px;
   margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 15px 20px;
 }
 
-/* ===== 로고 ===== */
+/* 로고 */
 .logo a {
   font-size: 28px;
   font-weight: bold;
@@ -29,14 +27,13 @@ body {
   text-decoration: none;
 }
 
-/* ===== 네비게이션 메뉴 ===== */
+/* 네비게이션 */
 .main-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-
   display: flex;
-  gap: 30px; /* 메뉴 간격 */
+  gap: 30px;  /* 메뉴 간격 */
 }
 
 .main-nav li {
@@ -48,17 +45,16 @@ body {
   color: #000;
   font-size: 16px;
   font-weight: 500;
-  padding-bottom: 5px;
   display: inline-block;
+  padding-bottom: 5px;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
-  color: #0078d7; /* AutoTribune 처럼 파란색 하이라이트 */
+.main-nav a:hover {
+  color: #0078d7;
   border-bottom: 2px solid #0078d7;
 }
 
-/* ===== 오른쪽 로그인/검색 버튼 ===== */
+/* 오른쪽 로그인/검색 */
 .header-right {
   font-size: 14px;
   color: #666;
