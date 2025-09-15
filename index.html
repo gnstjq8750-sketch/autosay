@@ -127,3 +127,14 @@ title: Autosay 메인
     {% endfor %}
   </div>
 </section>
+
+{% for post in site.posts limit:5 %}
+  <li>
+    <a href="{{ post.url | prepend: site.baseurl }}">
+      {% if post.image %}
+        <img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}" class="thumb">
+      {% endif %}
+      <span>{{ post.title }}</span>
+    </a>
+  </li>
+{% endfor %}
