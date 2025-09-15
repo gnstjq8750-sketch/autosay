@@ -1,6 +1,6 @@
 title: "Autosay"
 description: "자동차 뉴스 & 에세이"
-url: "https://gnstjq8750-sketch.github.io"
-baseurl: "/autosay"
+url: "https://gnstjq8750-sketch.github.io"  # 개인 깃허브 주소
+baseurl: "/autosay"                          # ← 레포 이름 (앞에 / 꼭 필요)
 markdown: kramdown
 theme: null
