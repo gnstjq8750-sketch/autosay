@@ -1,68 +1,74 @@
-/* 메뉴 전체 영역 */
-.menu {
-  background: #fff;
+/* 헤더 전체 */
+.site-header {
   border-bottom: 1px solid #ddd;
-  font-family: sans-serif;
+  background: #fff;
+  padding: 15px 0;
+  font-family: Arial, sans-serif;
 }
 
-/* 최상위 메뉴 (가로 정렬) */
-.menu > ul {
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 로고 */
+.logo a {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+.logo a span {
+  color: #0078d7; /* Tribune 처럼 포인트 컬러 */
+}
+
+/* 네비게이션 */
+.main-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;          /* 가로 방향 정렬 */
-  gap: 30px;              /* 메뉴 간격 */
+  display: flex;
+  gap: 25px;
 }
 
-.menu > ul > li {
-  position: relative;     /* 서브메뉴 위치 기준 */
-}
-
-.menu > ul > li > a {
+.main-nav a {
   text-decoration: none;
-  padding: 15px 20px;
-  display: block;
   color: #000;
-  font-weight: bold;
+  font-size: 16px;
+  padding: 5px 0;
 }
 
-/* hover 시 메인 글자 색상 */
-.menu > ul > li > a:hover {
-  color: #0078d7;
+.main-nav a:hover,
+.main-nav a.active {
+  color: #0078d7; /* 오토트리뷴처럼 파란 하이라이트 */
+  border-bottom: 2px solid #0078d7;
 }
 
-/* ▼ 서브메뉴 스타일 */
-.submenu {
-  display: none;           /* 기본 숨김 */
-  position: absolute;
-  top: 100%;              /* 부모 메뉴 바로 아래 */
-  left: 0;
-  background: #fff;
-  border: 1px solid #ddd;
-  min-width: 160px;
-  padding: 8px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-  z-index: 1000;
-}
-
-.submenu li {
-  list-style: none;
-}
-
-.submenu a {
-  padding: 10px 15px;
-  display: block;
-  text-decoration: none;
-  color: #333;
+/* 오른쪽 로그인 / 검색 / 메뉴 버튼 */
+.header-right {
   font-size: 14px;
+  color: #666;
 }
 
-.submenu a:hover {
-  background: #f5f5f5;
-  color: #0078d7;
+.header-right a {
+  text-decoration: none;
+  color: #666;
+  margin: 0 5px;
 }
 
-/* hover 시 서브메뉴 표시 */
-.menu ul li:hover > .submenu {
-  display: block;
+.header-right a:hover {
+  color: #000;
+}
+
+.search-btn,
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
 }
