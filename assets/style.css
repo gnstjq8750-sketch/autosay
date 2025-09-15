@@ -1,18 +1,22 @@
-/* 헤더 전체 */
-.site-header {
-  border-bottom: 1px solid #ddd;
-  background: #fff;
-  padding: 15px 0;
+/* 공통 */
+body {
+  margin: 0;
   font-family: Arial, sans-serif;
 }
 
-.site-header .container {
+/* 헤더 */
+.site-header {
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 95%;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 15px 20px;
 }
 
 /* 로고 */
@@ -21,9 +25,6 @@
   font-weight: bold;
   color: #000;
   text-decoration: none;
-}
-.logo a span {
-  color: #0078d7; /* Tribune 처럼 포인트 컬러 */
 }
 
 /* 네비게이션 */
@@ -42,13 +43,12 @@
   padding: 5px 0;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
-  color: #0078d7; /* 오토트리뷴처럼 파란 하이라이트 */
+.main-nav a:hover {
+  color: #0078d7;
   border-bottom: 2px solid #0078d7;
 }
 
-/* 오른쪽 로그인 / 검색 / 메뉴 버튼 */
+/* 오른쪽 로그인/검색 */
 .header-right {
   font-size: 14px;
   color: #666;
@@ -64,11 +64,10 @@
   color: #000;
 }
 
-.search-btn,
-.menu-btn {
+.icon-btn {
   background: none;
   border: none;
-  font-size: 16px;
   margin-left: 10px;
+  font-size: 16px;
   cursor: pointer;
 }
