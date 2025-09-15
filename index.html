@@ -3,20 +3,10 @@ layout: default
 title: Autosay 메인
 ---
 
-    <!-- 오른쪽 로그인/검색 -->
-    <div class="header-right">
-      <a href="#">로그인</a> | <a href="#">회원가입</a>
-      <button class="search-btn">🔍</button>
-      <button class="menu-btn">☰</button>
-    </div>
-  </div>
-</header>
-
-<!-- 상단 최신뉴스 -->
+<!-- 여기부터 본문 시작 -->
 <section class="headline">
   <h2>최신뉴스</h2>
   <div class="headline-grid">
-    <!-- 대표 큰 뉴스 -->
     {% assign main_post = site.posts.first %}
     {% if main_post %}
     <article class="main-article">
@@ -31,7 +21,6 @@ title: Autosay 메인
     </article>
     {% endif %}
 
-    <!-- 오른쪽 작은 뉴스 목록 -->
     <aside class="side-articles">
       <ul>
       {% for post in site.posts offset:1 limit:4 %}
@@ -49,7 +38,6 @@ title: Autosay 메인
   </div>
 </section>
 
-<!-- 주요 뉴스 섹션 -->
 <section class="popular-news">
   <h2>주요뉴스</h2>
   <div class="news-grid">
@@ -64,7 +52,6 @@ title: Autosay 메인
   </div>
 </section>
 
-<!-- ▒▒ 주식 ▒▒ -->
 <section class="category-section">
   <h2>주식</h2>
   <div class="stock-grid">
@@ -79,7 +66,6 @@ title: Autosay 메인
   </div>
 </section>
 
-<!-- ▒▒ 자동차 ▒▒ -->
 <section class="category-section">
   <h2>자동차</h2>
   <div class="news-list">
@@ -96,7 +82,6 @@ title: Autosay 메인
   </div>
 </section>
 
-<!-- ▒▒ 골프 ▒▒ -->
 <section class="category-section">
   <h2>골프</h2>
   <div class="golf-list">
