@@ -24,20 +24,20 @@
   margin-bottom: 10px;
   border-radius: 5px;
 }
-/* 그리드형 (연예, 뉴스) */
-.news-grid {
+/* 그리드형 (주식) */
+.stock-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
-.news-grid img {
+.stock-grid img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 3px;
   margin-bottom: 6px;
 }
-.news-grid h4 {
+.stock-grid h4 {
   font-size: 15px;
   margin: 0;
   line-height: 1.4;
@@ -64,23 +64,11 @@
   color: #222;
 }
 
-/* 오피니언 (텍스트만) */
+/* 골프 (갤러리) */
 .opinion-list ul { list-style: none; margin: 0; padding: 0; }
 .opinion-list li {
   margin-bottom: 10px;
   font-size: 15px;
 }
 
-/* 포토/영상 (갤러리) */
-.photo-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-.photo-gallery img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
-}
 
