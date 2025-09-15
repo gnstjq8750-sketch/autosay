@@ -1,124 +1,69 @@
-.category-section {
-  margin-top: 40px;
-}
-.category-section h2 {
-  border-bottom: 3px solid #000;
-  padding-bottom: 8px;
-  margin-bottom: 15px;
-}
-/* 최신뉴스 썸네일 작은 이미지 */
-.thumb {
-  width: 80px;
-  height: 60px;
-  object-fit: cover;
-  margin-right: 10px;
-  border-radius: 3px;
-  vertical-align: middle;
+/* 메뉴 래퍼 */
+.menu {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  font-family: sans-serif;
 }
 
-/* 대표 뉴스 큰 이미지 */
-.thumb-large {
-  width: 100%;
-  max-height: 350px;
-  object-fit: cover;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-/* 그리드형 (주식) */
-.stock-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-.stock-grid img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 3px;
-  margin-bottom: 6px;
-}
-.stock-grid h4 {
-  font-size: 15px;
-  margin: 0;
-  line-height: 1.4;
-}
-
-/* 리스트형 (자동차) */
-.news-list ul {
-  list-style: none;
-  margin: 0; padding: 0;
-}
-.news-list li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-}
-.news-list img {
-  width: 120px; height: 80px;
-  object-fit: cover;
-  margin-right: 12px;
-  border-radius: 4px;
-}
-.news-list span {
-  font-size: 15px;
-  color: #222;
-}
-
-/* 골프 (갤러리) */
-.opinion-list ul { list-style: none; margin: 0; padding: 0; }
-.opinion-list li {
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-/* 메뉴 기본 세팅 */
-.menu ul {
+/* 상위 메뉴 (가로 배치) */
+.menu > ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;         /* inline-block 대신 flex 사용 */
+  gap: 20px;             /* 메뉴 간격 */
 }
 
 .menu > ul > li {
-  display: inline-block;   /* 가로로 메뉴 배치 */
-  position: relative;      /* 서브메뉴 위치 기준 */
-  margin-right: 20px;
+  position: relative;    /* 서브메뉴 기준점 */
 }
 
 .menu > ul > li > a {
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 12px 16px;
   display: block;
   color: #000;
+  font-weight: bold;
+}
+
+/* 호버 시 글자색 */
+.menu > ul > li > a:hover {
+  color: #0078d7; /* 파란색 하이라이트 */
 }
 
 /* 서브메뉴 숨기기 */
 .submenu {
   display: none;
   position: absolute;
-  top: 100%;     /* 부모(li)의 바로 아래 */
+  top: 100%;  /* 부모 li 바로 아래 */
   left: 0;
   background: #fff;
   border: 1px solid #ddd;
-  min-width: 150px;
+  min-width: 160px;
+  padding: 8px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
 }
 
+/* 서브메뉴 아이템 */
 .submenu li {
   display: block;
 }
 
 .submenu a {
-  padding: 10px;
+  padding: 10px 15px;
   display: block;
   color: #333;
   text-decoration: none;
+  font-size: 14px;
 }
 
 .submenu a:hover {
-  background: #f0f0f0;
+  background: #f5f5f5;
+  color: #0078d7;
 }
 
-/* 마우스를 올렸을 때 보이게 하기 */
+/* 마우스를 올렸을 때 보이게 */
 .menu ul li:hover > .submenu {
   display: block;
 }
-
