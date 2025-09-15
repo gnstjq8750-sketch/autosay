@@ -1,60 +1,59 @@
-/* 메뉴 래퍼 */
+/* 메뉴 전체 영역 */
 .menu {
   background: #fff;
   border-bottom: 1px solid #ddd;
   font-family: sans-serif;
 }
 
-/* 상위 메뉴 (가로 배치) */
+/* 최상위 메뉴 (가로 정렬) */
 .menu > ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;         /* inline-block 대신 flex 사용 */
-  gap: 20px;             /* 메뉴 간격 */
+  display: flex;          /* 가로 방향 정렬 */
+  gap: 30px;              /* 메뉴 간격 */
 }
 
 .menu > ul > li {
-  position: relative;    /* 서브메뉴 기준점 */
+  position: relative;     /* 서브메뉴 위치 기준 */
 }
 
 .menu > ul > li > a {
   text-decoration: none;
-  padding: 12px 16px;
+  padding: 15px 20px;
   display: block;
   color: #000;
   font-weight: bold;
 }
 
-/* 호버 시 글자색 */
+/* hover 시 메인 글자 색상 */
 .menu > ul > li > a:hover {
-  color: #0078d7; /* 파란색 하이라이트 */
+  color: #0078d7;
 }
 
-/* 서브메뉴 숨기기 */
+/* ▼ 서브메뉴 스타일 */
 .submenu {
-  display: none;
+  display: none;           /* 기본 숨김 */
   position: absolute;
-  top: 100%;  /* 부모 li 바로 아래 */
+  top: 100%;              /* 부모 메뉴 바로 아래 */
   left: 0;
   background: #fff;
   border: 1px solid #ddd;
   min-width: 160px;
   padding: 8px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   z-index: 1000;
 }
 
-/* 서브메뉴 아이템 */
 .submenu li {
-  display: block;
+  list-style: none;
 }
 
 .submenu a {
   padding: 10px 15px;
   display: block;
-  color: #333;
   text-decoration: none;
+  color: #333;
   font-size: 14px;
 }
 
@@ -63,7 +62,7 @@
   color: #0078d7;
 }
 
-/* 마우스를 올렸을 때 보이게 */
+/* hover 시 서브메뉴 표시 */
 .menu ul li:hover > .submenu {
   display: block;
 }
