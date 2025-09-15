@@ -66,3 +66,9 @@
   object-fit: cover;
   border-radius: 4px;
 }
+.thumb {
+  width: 120px;
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
